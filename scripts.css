@@ -1,0 +1,199 @@
+/* ============================================
+   CSS RESET 
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 { margin-bottom: 15px; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+.navbar {
+    background-color: rgb(75, 53, 39);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Crucial for minimized tabs */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: white; }
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.navigation ul { display: flex; gap: 20px; }
+.navigation a { color: white; padding: 5px 10px; transition: background-color 0.3s ease; }
+.navigation a:hover, .navigation a.active { background-color: rgba(255, 255, 255, 0.2); border-radius: 5px; }
+
+/* ============================================
+   BUTTONS & HERO SECTIONS
+   ========================================== */
+.btn {
+    display: inline-block;
+    background-color: rgb(75, 53, 39);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover { background-color: rgb(55, 38, 28); transform: scale(1.05); }
+.btn:active { transform: scale(0.98); }
+
+.hero, .page-hero { background-color: #fcf8e3; text-align: center; padding: 60px 20px; }
+.page-hero { padding: 40px 20px; border-bottom: 2px solid rgb(75, 53, 39); }
+.hero h1 { font-size: 2.5rem; color: rgb(75, 53, 39); }
+.hero p { font-size: 1.2rem; margin-bottom: 20px; color: #555; }
+.hero-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+/* ============================================
+   GRIDS
+   ============================================ */
+.features { padding: 50px 20px; background-color: rgb(75, 53, 39); color: white; text-align: center; }
+.features h2 { color: white; margin-bottom: 30px; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+.feature-card { background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; }
+
+.about-preview { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 20px; align-items: center; background-color: white; max-width: 1000px; margin: 0 auto; }
+.about-text h2 { color: rgb(75, 53, 39); }
+
+.menu-preview, .menu-section { padding: 50px 20px; text-align: center; background-color: #f4f0ec; }
+.menu-preview h2, .menu-section h2 { color: rgb(75, 53, 39); margin-bottom: 30px; }
+.menu-section h3 { margin-top: 40px; margin-bottom: 20px; color: rgb(75, 53, 39); text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.menu-item { background-color: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
+.menu-item h4 { margin-top: 10px; color: rgb(75, 53, 39); }
+.menu-item span { font-weight: bold; color: rgb(75, 53, 39); display: block; margin-top: 5px; }
+.menu-btn-container { margin-top: 30px; }
+
+.testimonials { padding: 50px 20px; background-color: rgb(120, 85, 65); color: white; text-align: center; }
+.testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+.testimonial-card { background-color: white; color: #333; padding: 20px; border-radius: 8px; }
+.testimonial-card cite { display: block; margin-top: 10px; font-weight: bold; color: rgb(75, 53, 39); }
+
+.about-content { padding: 40px 20px; max-width: 1000px; margin: 0 auto; background-color: white; }
+.mission-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 40px 20px; background-color: #e8e0d8; max-width: 1000px; margin: 0 auto; }
+.mv-card { background-color: white; padding: 20px; border-radius: 8px; text-align: center; }
+.values { padding: 40px 20px; text-align: center; background-color: #f4f0ec; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 20px auto 0; }
+.value-card { background-color: white; padding: 20px; border-radius: 8px; }
+.team { padding: 40px 20px; background-color: #6b4e3d; color: white; text-align: center; }
+.team h2 { color: white; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 20px auto 0; }
+.team-card { background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; }
+
+/* ============================================
+   FORMS & LOCATIONS
+   ============================================ */
+.enquiry-section, .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 20px; max-width: 1000px; margin: 0 auto; background-color: white; }
+.enquiry-info ul, .contact-info ul { margin-top: 15px; }
+.enquiry-info li, .contact-info li { margin-bottom: 10px; }
+form { display: flex; flex-direction: column; background-color: #f4f0ec; padding: 25px; border-radius: 8px; }
+form label { font-weight: bold; margin-bottom: 5px; color: rgb(75, 53, 39); }
+form input, form select, form textarea { padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
+form input:focus, form select:focus, form textarea:focus { outline: none; border-color: rgb(75, 53, 39); }
+.radio-group { display: flex; gap: 20px; margin-bottom: 15px; }
+.radio-group label { font-weight: normal; display: flex; align-items: center; gap: 5px; }
+
+.locations { padding: 40px 20px; text-align: center; background-color: #f4f0ec; }
+.locations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1000px; margin: 20px auto 0; }
+.location-card { background-color: white; padding: 20px; border-radius: 8px; text-align: left; }
+.location-card h4 { margin-top: 15px; color: rgb(75, 53, 39); }
+.map-placeholder { background-color: #e0e0e0; padding: 30px; text-align: center; border-radius: 5px; margin-top: 15px; color: #666; }
+
+.cta-section { padding: 50px 20px; text-align: center; background-color: #fcf8e3; border-top: 2px solid rgb(75, 53, 39); }
+.cta-section h2 { color: rgb(75, 53, 39); }
+footer { background-color: rgb(75, 53, 39); color: white; text-align: center; padding: 20px; margin-top: 30px; }
+
+/* ============================================
+   LIGHTBOX MODAL CSS 
+   ============================================ */
+.gallery-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1000px; margin: 20px auto; padding: 20px; }
+.hover-shadow { cursor: pointer; transition: 0.3s; opacity: 0.8; }
+.hover-shadow:hover { opacity: 1; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); }
+
+.modal { display: none; position: fixed; z-index: 2000; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: black; }
+.modal-content { position: relative; background-color: #fefefe; margin: auto; padding: 0; width: 90%; max-width: 1200px; }
+.close { color: white; position: absolute; top: 10px; right: 25px; font-size: 35px; font-weight: bold; }
+.close:hover, .close:focus { color: #999; text-decoration: none; cursor: pointer; }
+.mySlides { display: none; }
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 20px; transition: 0.6s ease; user-select: none; background-color: rgba(0,0,0,0.5); }
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
+.caption-container { text-align: center; background-color: black; padding: 2px 16px; color: white; }
+img.demo { opacity: 0.6; }
+.active, .demo:hover { opacity: 1; }
+
+/* ============================================
+   MEDIA QUERIES (Part 2 Feedback Fix)
+   ============================================ */
+@media (min-width: 1024px) {
+    .hero { padding: 80px 40px; }
+    .hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .about-preview, .enquiry-section, .contact-section, .mission-vision, .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    .feature-grid, .values-grid, .team-grid, .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-toggle { display: block; }
+    .navigation ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .navigation ul.active { display: flex; }
+    .navbar { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2rem; }
+    .gallery-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    .feature-grid, .values-grid, .team-grid, .testimonial-grid, .menu-grid, .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
+    .btn { width: 100%; text-align: center; }
+    .hero-buttons { flex-direction: column; }
+}
